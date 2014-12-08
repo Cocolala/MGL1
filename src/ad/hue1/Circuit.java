@@ -17,7 +17,7 @@ package ad.hue1;
  * 
  * <ul>
  * 
- * @author TLE
+ * @author Julia Ackermann, Daniela Raddatz & Sarah Hublitz
  * 
  */
 public interface Circuit {

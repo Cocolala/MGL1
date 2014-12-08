@@ -4,13 +4,13 @@ package ad.hue1;
  * Instanzen dieser Klassen implementieren den Typ Circuit mit Hilfe einer
  * baumartigen Datenstruktur.
  *
- * @author <hier Ihr Name und Ihre Matrikelnummer!>
+ * @author Julia Ackermann(), Daniela Raddatz() & Sarah Hublitz(5039746)
  *
  */
 public final class TreeCircuit implements Circuit {
 
 	private CircuitA root;
-
+	
 	/**
 	 * Erzeugt einen Schaltkreis der nur aus einem Widerstand besteht.
 	 * 
@@ -18,33 +18,27 @@ public final class TreeCircuit implements Circuit {
 	 *            Widerstandswert in Ohm
 	 */
 	public TreeCircuit(double resistance) {
-
 	}
 
 	/**
-	 * Erzeugt einen Schaltkreis aus Unterschaltkreisen. der Typ des
-	 * Schaltkreies (Parallel oder in Serie)
+	 * Erzeugt einen Schaltkreis aus Unterschaltkreisen.
 	 * 
 	 * @param type
+	 *            der Typ des Schaltkreies (Parallel oder in Serie)
 	 * @param subCircuits
-	 *            die Unterschaltkreise
-	 *
 	 */
-	public TreeCircuit(CircuitType parallelCircuit, TreeCircuit c_1_0,
-			TreeCircuit c_1_1) {
-		// TODO Auto-generated constructor stub
+	public TreeCircuit(CircuitType type, TreeCircuit... subCircuits) {
+
 	}
 
 	/**
 	 * Erzeugt einen Schaltkreis aus einer textuellen Beschreibung.
 	 * <ul>
 	 * <li>double-Wert: Schaltkreis aus einem Widerstand
-	 * <li>"(" Schaltkreis-1 "-" Schaltkreis-2 "-" ... ) serielle Verschaltung
+	 * <li>"(" Schaltkreis-1 "-" Schaltkreis-2 - ... ")" serielle Verschaltung
 	 * von Schaltkreis-1 ... zu einem neuen Schaltkreis
-	 *
-	 * <li>"(" Schaltkreis-1 "|" Schaltkreis-2 "|" ... ) parallele Verschaltung
+	 * <li>"(" Schaltkreis-1 "|" Schaltkreis-2 | ... ")" parallele Verschaltung
 	 * von Schaltkreis-1 ... zu einem neuen Schaltkreis
-	 *
 	 * </ul>
 	 * 
 	 * @param str
@@ -54,59 +48,103 @@ public final class TreeCircuit implements Circuit {
 
 	}
 
-	
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return null;
+	}
 
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see hausuebung_1.Circuit#setVoltage(double)
+	 */
 	@Override
 	public void setVoltage(double U) {
-		// TODO Auto-generated method stub
-
 	}
 
-	@Override
-	public CircuitType getType() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public double getR() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public double getU() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public double getI() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see hausuebung_1.Circuit#getType(java.lang.String)
+	 */
 	@Override
 	public CircuitType getType(String pathExpr) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see hausuebung_1.Circuit#getR(java.lang.String)
+	 */
 	@Override
 	public double getR(String pathExpr) {
-		// TODO Auto-generated method stub
 		return 0;
+
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see hausuebung_1.Circuit#getU(java.lang.String)
+	 */
 	@Override
 	public double getU(String pathExpr) {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see hausuebung_1.Circuit#getType()
+	 */
+	@Override
+	public CircuitType getType() {
+		return null;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see hausuebung_1.Circuit#getI(java.lang.String)
+	 */
 	@Override
 	public double getI(String pathExpr) {
-		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see hausuebung_1.Circuit#getR()
+	 */
+	@Override
+	public double getR() {
+		return 0;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see hausuebung_1.Circuit#getU()
+	 */
+	@Override
+	public double getU() {
+		return 0;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see hausuebung_1.Circuit#getI()
+	 */
+	@Override
+	public double getI() {
 		return 0;
 	}
 }
